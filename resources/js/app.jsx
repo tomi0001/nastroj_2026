@@ -1,8 +1,10 @@
 import { createRoot } from 'react-dom/client';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-// Wyczyść istniejącą zawartość HTML
-document.body.innerHTML = '<div id="app"></div>';
+import Alpine from 'alpinejs';
 
-// Zamiast niej wyrenderuj swój komponent reactowy
-const root = createRoot(document.getElementById('app'));
-root.render(<h1>Witaj, świhjmhjecie!</h1>);
+window.Alpine = Alpine;
+
+Alpine.start();
+

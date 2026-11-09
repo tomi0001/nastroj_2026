@@ -15,14 +15,13 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->bigInteger('id_substances')->unsigned();
-            $table->foreign("id_substances")->references("id")->on("substances");
+            $table->foreign('id_substances')->references('id')->on('substances');
             $table->bigInteger('id_products')->unsigned();
-            $table->foreign("id_products")->references("id")->on("products");
+            $table->foreign('id_products')->references('id')->on('products');
             $table->float('doseProduct')->unsigned()->nullable();
             $table->tinyInteger('Mg_Ug')->default(1)->unsigned();
             $table->timestamps();
         });
-
 
     }
 
@@ -32,6 +31,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('substances_products');
-     
+
     }
 };

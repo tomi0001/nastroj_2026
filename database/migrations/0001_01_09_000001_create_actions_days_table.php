@@ -16,11 +16,10 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('id_users')->unsigned()->index();
             $table->bigInteger('id_actions')->unsigned();
-            $table->foreign("id_actions")->references("id")->on("actions");
+            $table->foreign('id_actions')->references('id')->on('actions');
             $table->datetime('date');
             $table->timestamps();
         });
-
 
     }
 
@@ -30,6 +29,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('actions_days');
-     
+
     }
 };

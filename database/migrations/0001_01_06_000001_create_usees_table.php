@@ -16,13 +16,12 @@ return new class extends Migration
             $table->id();
             $table->float('portion')->unsigned();
             $table->bigInteger('id_users')->unsigned();
-            $table->foreign("id_users")->references("id")->on("users");
+            $table->foreign('id_users')->references('id')->on('users');
             $table->bigInteger('id_products')->unsigned();
-            $table->foreign("id_products")->references("id")->on("products");
-            $table->datetime("date");
+            $table->foreign('id_products')->references('id')->on('products');
+            $table->datetime('date');
             $table->timestamps();
         });
-
 
     }
 
@@ -32,6 +31,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('usees');
-     
+
     }
 };

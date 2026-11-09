@@ -16,11 +16,10 @@ return new class extends Migration
             $table->id();
             $table->text('name')->nullable();
             $table->bigInteger('id_users')->unsigned();
-            $table->foreign("id_users")->references("id")->on("users");
-            $table->float('level_pleasure',6,2)->default(0);
+            $table->foreign('id_users')->references('id')->on('users');
+            $table->float('level_pleasure', 6, 2)->default(0);
             $table->timestamps();
         });
-
 
     }
 
@@ -30,6 +29,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('actions');
-     
+
     }
 };

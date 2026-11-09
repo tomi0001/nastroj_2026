@@ -16,10 +16,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->bigInteger('id_users')->unsigned();
-            $table->foreign("id_users")->references("id")->on("users");
+            $table->foreign('id_users')->references('id')->on('users');
             $table->timestamps();
         });
-
 
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('substances');
-     
+
     }
 };

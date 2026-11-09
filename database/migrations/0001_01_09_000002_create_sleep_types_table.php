@@ -15,14 +15,13 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->bigInteger('id_moods')->unsigned();
-            $table->foreign("id_moods")->references("id")->on("moods");
+            $table->foreign('id_moods')->references('id')->on('moods');
             $table->smallInteger('sleep_flat')->nullable();
             $table->smallInteger('sleep_deep')->nullable();
             $table->smallInteger('sleep_rem')->nullable();
             $table->smallInteger('sleep_working')->nullable();
             $table->timestamps();
         });
-
 
     }
 
@@ -32,6 +31,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('sleep_types');
-     
+
     }
 };

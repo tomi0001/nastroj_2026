@@ -15,14 +15,13 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->bigInteger('id_moods')->unsigned();
-            $table->foreign("id_moods")->references("id")->on("moods");
+            $table->foreign('id_moods')->references('id')->on('moods');
             $table->bigInteger('id_actions')->unsigned();
-            $table->foreign("id_actions")->references("id")->on("actions");
+            $table->foreign('id_actions')->references('id')->on('actions');
             $table->smallInteger('percent_executing')->unsigned()->nullable();
             $table->integer('minute_exe')->unsigned()->nullable();
             $table->timestamps();
         });
-
 
     }
 
@@ -32,6 +31,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('moods_actions');
-     
+
     }
 };

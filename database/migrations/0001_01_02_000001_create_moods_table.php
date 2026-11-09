@@ -15,19 +15,18 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->bigInteger('id_users')->unsigned();
-            $table->foreign("id_users")->references("id")->on("users");
+            $table->foreign('id_users')->references('id')->on('users');
             $table->dateTime('date_start');
             $table->dateTime('date_end');
-            $table->float('level_mood',6,2)->nullable();
-            $table->float('level_anxiety',6,2)->nullable();
-            $table->float('level_nervousness',6,2)->nullable();
-            $table->float('level_stimulation',6,2)->nullable();
+            $table->float('level_mood', 6, 2)->nullable();
+            $table->float('level_anxiety', 6, 2)->nullable();
+            $table->float('level_nervousness', 6, 2)->nullable();
+            $table->float('level_stimulation', 6, 2)->nullable();
             $table->smallInteger('number_awakenings')->default(0);
             $table->text('what_work')->nullable();
-            $table->enum('type', ['mood', 'sleep'])->default("mood");
+            $table->enum('type', ['mood', 'sleep'])->default('mood');
             $table->timestamps();
         });
-
 
     }
 
@@ -37,6 +36,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('moods');
-     
+
     }
 };
