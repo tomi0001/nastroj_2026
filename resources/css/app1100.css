@@ -1,0 +1,36 @@
+@media (min-width: 1210px) and (max-width: 1410px) {
+    .user {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+    }
+
+    div.calendar {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-top: 50px;
+    }
+
+    div.uc-day-cell {
+
+        height: 80px;
+
+    }
+
+    .uc-week-row {
+        max-height: 10px;
+    }
+
+    .uc-calendar {
+        --cal-font-size: 10px;
+        --cal-event-height: 26px;
+        height: auto !important;
+
+
+        /* Możesz dopasować paddingi i wysokość komórek/rzędów */
+    }
+
+
+}

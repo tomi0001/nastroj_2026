@@ -4,7 +4,7 @@
 <div id="calendar" class="calendar"></div>
 
 @props(['year' => '{{ $year }}', 'month' => '{{ $month }}', 'day' => '{{ $day }}', 'userName' => 'Guest'])
-{{ $year }} {{ $month }} {{ $day }} {{ $userName }}
+
 <script>
     const calendar = new SimpleCalendarJs('#calendar', {
         mode: 'date-picker',
@@ -34,6 +34,9 @@
                 "{{ route('profile.main') }}/" + date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
         },
     });
-
+    data = new Date();
+    // if ({{ $year }} == data.getFullYear() && {{ $month }} == data.getMonth() + 1) {
+    //     calendar.setSelectedDate(new Date({{ $year }}, {{ $month }} - 1, {{ $day }}));
+    // }
     calendar.setSelectedDate(new Date({{ $year }}, {{ $month }} - 1, {{ $day }}));
 </script>

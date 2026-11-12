@@ -1,36 +1,36 @@
-.user {
-    background-color: blue;
-    width: 100px;
-    height: 100px;
-}
+@media (min-width: 1810px) {
+    .user {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+    }
 
-div.calendar {
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-}
+    div.calendar {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
 
-div.uc-day-cell {
+        padding-top: 50px;
+    }
 
-    height: 80px;
+    div.uc-day-cell {
 
-}
+        height: 80px;
 
-.uc-week-row {
-    max-height: 10px;
-}
+    }
 
-.uc-calendar {
-    --cal-font-size: 10px;
-    --cal-event-height: 26px;
-    height: auto !important;
-    background-color: #f7f1e5 !important;
+    .uc-week-row {
+        max-height: 10px;
+    }
 
-    /* Możesz dopasować paddingi i wysokość komórek/rzędów */
-}
+    .uc-calendar {
+        --cal-font-size: 10px;
+        --cal-event-height: 26px;
+        height: auto !important;
 
-.uc-toolbar {
-    background-color: #f7f1e5 !important;
-    color: #000000 !important;
+
+        /* Możesz dopasować paddingi i wysokość komórek/rzędów */
+    }
+
+
 }

@@ -1,3 +1,57 @@
 body {
-    background-color: #f7f1e5;
+    background-color: #fcefda;
+}
+
+.uc-toolbar {
+    background-color: #baf098 !important;
+    color: #000000 !important;
+}
+
+.uc-calendar {
+    background-color: transparent !important;
+
+}
+
+nav.menu {
+    background: linear-gradient(90deg,
+            rgb(230, 240, 196) 0%,
+            rgb(247, 236, 163) 19%,
+            rgb(231, 246, 178) 46%,
+            rgb(210, 234, 182) 76%,
+            rgb(234, 199, 123) 100%);
+
+}
+
+.uc-day-cell {
+    background-color: #fbf0db !important;
+    color: #210202 !important;
+    border: 1px solid #b1b1b1 !important;
+    opacity: 0.7;
+}
+
+.uc-selected {
+    background-color: #05c15d !important;
+    color: #000000 !important;
+    border: 1px solid #b6b9b4 !important;
+    opacity: 0.7;
+}
+
+.uc-day-number {
+    color: #670a0a !important;
+    background-color: #fbf0db !important;
+
+}
+
+.uc-day-cell:hover {
+    background-color: #e5e369 !important;
+    color: #000000 !important;
+    border: 1px solid #e0f8ce !important;
+    opacity: 0.7;
+}
+
+.uc-selected {
+    background-color: #69ee88 !important;
+    color: #000000 !important;
+    border: 1px solid #b6b9b4 !important;
+
 }

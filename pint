@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./vendor/bin/pint --blade
+./vendor/bin/pint 
